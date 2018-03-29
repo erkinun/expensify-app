@@ -1,9 +1,9 @@
 import React from 'react';
 
 // edit page
-const EditExpensePage = () => (
+const EditExpensePage = ({ match }) => (
     <div>
-        This is from my edit expense component
+        This is from my edit expense component for expense: {match.params.id}
     </div>
 );
 
