@@ -1,16 +1,28 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import ExpenseForm from './ExpenseForm'
+import { editExpense } from '../actions/expenses'
 
 // edit page
-const EditExpensePage = ({ match }) => (
-    <div>
-        This is from my edit expense component for expense: {match.params.id}
-    </div>
-);
+const EditExpensePage = (props) => {
+    console.log(props)
+    return (
+        <div>
+            <ExpenseForm 
+                expense={props.expense}
+                onSubmit={(expense) => {
+                        console.log('updated', expense)
+                        props.dispatch(editExpense(props.expense.id, expense))
+                        props.history.push('/') 
+                    }
+                }/>
+        </div>
+    )
+}
 
 const mapStateToProps = (state, props) => {
     return {
-        expense: state.expenses.find(e => e.id === props.match.params.id)
+        expense: state.expenses.find((e) => e.id === props.match.params.id)
     }
 }
 
