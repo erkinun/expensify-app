@@ -58,3 +58,9 @@ test('should not set invalid amount', () => {
     })
     expect(wrapper.state('amount')).toBe('')
 })
+
+test('should set calendar on focus change', () => {
+    const wrapper = shallow(<ExpenseForm />)
+    wrapper.find('SingleDatePicker').prop('onFocusChange')({ 'focused': true })
+    expect(wrapper.state('calendarFocused')).toEqual(true)
+})
