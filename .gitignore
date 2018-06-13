@@ -29,3 +29,9 @@ yarn-error.log
 yarn.lock
 package-lock.json
 **/__snapshots__/**
+
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
+
