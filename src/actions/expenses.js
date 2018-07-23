@@ -6,7 +6,7 @@ export const addExpense = (expense) => ({
     expense
 })
 
-export const startsrc/components/AddExpensePage.jsAddExpense = (expenseData = {}) => {
+export const startAddExpense = (expenseData = {}) => {
     return (dispatch) => {
         const {
             description = '',
