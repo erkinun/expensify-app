@@ -2,12 +2,12 @@ import * as firebase from 'firebase'
 //import expenses from '../tests/fixtures/expenses'
 
 const config = {
-    apiKey: "AIzaSyB_45D5Ilc9covQR1hCiaUfcDdVnG15qW8",
-    authDomain: "expensify-abe50.firebaseapp.com",
-    databaseURL: "https://expensify-abe50.firebaseio.com",
-    projectId: "expensify-abe50",
-    storageBucket: "expensify-abe50.appspot.com",
-    messagingSenderId: "847200238027"
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.FIREBASE_DATABASE_URL,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
 };
 firebase.initializeApp(config);
 
