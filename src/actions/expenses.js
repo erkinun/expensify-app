@@ -39,3 +39,10 @@ export const editExpense = (id, updates) => {
         updates
     }   
 }
+
+export const setExpenses = (expenses) => {
+    return {
+        type: 'SET_EXPENSES',
+        expenses
+    }
+}
