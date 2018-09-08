@@ -2,6 +2,8 @@ const defaultExpenseState = []
 
 export default (state = defaultExpenseState, action) => {
     switch(action.type) {
+        case 'SET_EXPENSES':
+            return action.expenses
         case 'ADD_EXPENSE':
             return [
                 ...state,
