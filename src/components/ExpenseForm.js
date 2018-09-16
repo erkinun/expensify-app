@@ -94,7 +94,8 @@ class ExpenseForm extends React.Component {
                         value={this.state.note}
                         onChange={this.onNoteChange}>
                     </textarea>
-                    <button>Add Expense</button>
+                    {this.state.id != '' && <button>Edit Expense</button>}
+                    {this.state.id == '' && <button>Add Expense</button>}
                 </form>
             </div>
         )
