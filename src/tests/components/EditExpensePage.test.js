@@ -25,5 +25,5 @@ test('should handle editExpense', () => {
 test('should handle removeExpense', () => {
     wrapper.find('button').prop('onClick')()
     expect(history.push).toHaveBeenLastCalledWith('/')
-    expect(removeExpense).toHaveBeenLastCalledWith(2)
+    expect(removeExpense).toHaveBeenLastCalledWith('2')
 })
