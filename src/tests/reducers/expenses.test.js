@@ -54,7 +54,7 @@ test('should add an expense', () => {
 test('should edit an expense', () => {
     const action = {
         type: 'EDIT_EXPENSE',
-        id: 1,
+        id: '1',
         updates: {
             note: 'Hede'
         }
