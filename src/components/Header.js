@@ -15,7 +15,10 @@ export const Header = ({logout}) => (
 );
 
 const mapDispatchToProps = (dispatch) => ({
-  logout: () => dispatch(startLogout())
+  logout: () => {
+      console.log("loggin out!")
+      dispatch(startLogout())
+  }
 })
 
 export default connect(undefined, mapDispatchToProps)(Header)
