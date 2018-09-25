@@ -16,7 +16,6 @@ export const Header = ({logout}) => (
 
 const mapDispatchToProps = (dispatch) => ({
   logout: () => {
-      console.log("loggin out!")
       dispatch(startLogout())
   }
 })
