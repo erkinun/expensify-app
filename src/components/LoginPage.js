@@ -9,7 +9,7 @@ export class LoginPage extends React.Component {
         <div className="box">
           <h1 className="title">Expensify</h1>
           <p>It's time to track your expenses from web</p>
-          <button className="login_button" onClick={this.props.startLogin}>Login with Google</button>
+          <button className="button" onClick={this.props.startLogin}>Login with Google</button>
         </div>
       </div> 
     )
